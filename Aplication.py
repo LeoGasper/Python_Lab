@@ -1,13 +1,15 @@
-primOpcoes = 0
-if primOpcoes == 0:
-    print("Selecione uma das opções abaixo")
-    print("1 - Matematica")
-    print("2 - ")
-    print("3 - ")
-    print("4 - ")
-    print("5 - ")
-    opcoes = int(input("Apresente o número da sua opção: "))
+from sympy import false
 
+print("Selecione uma das opções abaixo")
+print("1 - Matematica")
+print("2 - ")
+print("3 - ")
+print("4 - ")
+print("5 - ")
+opcoes = int(input("Apresente o número da sua opção: "))
+
+while True:
+    print("---Entrando na sua opção---")
     if opcoes == 1:
         print("Selecione a conta:")
         print("1 - Soma")
@@ -54,7 +56,10 @@ if primOpcoes == 0:
             num2Poten = int(input("Apresente o número que eleva: "))
             potenFinal = num1Poten ** num2Poten
             print(f"O valor final da potência é {potenFinal}")
-
         else:
-            resposta = input("Quer selecionar novamente? s/n")
-            if resposta.lower() != 's':
+            print("Número invalido")
+            encerrar = input("Deseja continuar no programa? s/n  - ").lower()
+    if encerrar != 's':
+        print("Encerrando!!")
+        break
+
